@@ -6,10 +6,10 @@
 
 import org.junit.jupiter.api.Test;
 
-public class TestUser {
+public class TestPet {
     // 2.1 atributos
     static String ct = "application/jason"; // content-type
-    static String uriUser = " Base URL: petstore.swagger.io/v2/user";
+    static String uriPet = " Base URL: petstore.swagger.io/v2/pet";
                 
 
     // 2.2 funções e métodos
