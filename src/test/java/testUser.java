@@ -6,12 +6,13 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import io.restassured.response.Response;
 
-public class testUser {
-    String ct ="application/json"; // content-type
-    String uriUser = "https://petstore.swagger.io/v2/user";
+public class TestUser {
+    static String ct ="application/json"; // content-type
+    static String uriUser = "https://petstore.swagger.io/v2/user";
+    static String token;
 
     @Test 
-    public void testLogin(){
+    public static String testLogin(){
         //configura 
         String userName = "robert";
         String password = "abcdef";
@@ -40,7 +41,7 @@ public class testUser {
         //extração
         String token = resposta.jsonPath().getString("message").substring(23); //extrai o token da resposta
         System.out.println("Conteúdo do Token: " + token); //exibe o token no console
-        
+        return token; //retorna o token
         
     }   
 

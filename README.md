@@ -13,6 +13,8 @@ This project is designed to automate API testing for a PetStore application usin
 - Test data validation (JSON format)
 - REST API interaction using HTTP methods (GET, POST, PUT, DELETE)
 - Clear and detailed logs of requests and responses
+- Token-based Authentication:  
+  Automated extraction of session tokens during user login for authenticated requests. 
 
 ### How to Run:
 1. Clone the repository:  

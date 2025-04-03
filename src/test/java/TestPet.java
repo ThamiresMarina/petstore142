@@ -27,6 +27,7 @@ public class TestPet {
     String categoryName = "cachorro"; //categoria do pet
     String tagName = "vacinado"; //tag do pet  
     String[] status = {"available", "sold"}; //status do pet 
+    
 
                 
 
@@ -75,11 +76,13 @@ public class TestPet {
     @Test @Order(2)
     public void testGetPet(){
         //configura
-       //entradas e saídas definidas no nível da classe
+        //entradas e saídas definidas no nível da classe
 
+       
     given()
             .contentType(ct)
             .log().all()
+            .header("api_key: ", TestUser.testLogin()) //chave de acesso
             //quando é get ou delete não tem body
             //executa
     .when()
@@ -92,12 +95,8 @@ public class TestPet {
         .body("id", is(petId)) //verifique o código do pet
         .body("category.name", is(categoryName)) //se é cachorro
         .body("tags[0].name", is(tagName)) //se está vacinado
-       
-         
- 
-        //verificar a linha 91
         
-       ; //fim do given 
+        ; //fim do given 
     }
 
     @Test @Order(3) 
@@ -127,8 +126,6 @@ public class TestPet {
             
     }
 
-    
-
 
     @Test @Order(4)    
     public void  testeDeletePet(){
@@ -151,7 +148,6 @@ public class TestPet {
          ;
 
     }   
-
     
     
 }
