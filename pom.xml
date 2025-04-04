@@ -14,21 +14,27 @@
 </properties>
 
 
-    <dependencies>
-    
-    <!-- JUnit 5 API -->
+<dependencies>
+    <!-- JUnit 5 -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.9.1</version> <!-- ou a versão mais recente -->
+        <version>5.9.2</version> 
         <scope>test</scope>
     </dependency>
 
-    <!-- JUnit 5 Engine -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.9.1</version> <!-- ou a versão mais recente -->
+        <version>5.9.2</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Para testes parametrizados -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>5.9.2</version>
         <scope>test</scope>
     </dependency>
 
@@ -36,19 +42,17 @@
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
-        <version>5.4.0</version>  <!-- ou a versão mais recente -->
-        <scope>test</scope> 
+        <version>5.3.0</version>
     </dependency>
 
-    <!-- Hamcrest para asserções -->
+    <!-- Gson para manipulação de JSON -->
     <dependency>
-        <groupId>org.hamcrest</groupId>
-        <artifactId>hamcrest</artifactId>
-        <version>2.2</version>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.10</version>
     </dependency>
-
-
 </dependencies>
+
 
     <build>
     <plugins>
